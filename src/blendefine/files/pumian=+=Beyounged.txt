@@ -1,0 +1,7 @@
+Perfect 562
+Early 316
+Late 82
+Miss 311
+MaxCombo 304
+黄元 72.24%
+0.0 1000.0

@@ -1,0 +1,7 @@
+-encoding
+gbk
+-d
+bin
+-sourcepath
+src
+src/blendefine/guanka.java

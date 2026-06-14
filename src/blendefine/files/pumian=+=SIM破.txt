@@ -1,0 +1,7 @@
+Perfect 779
+Early 149
+Late 193
+Miss 152
+MaxCombo 84
+玄元 87.02%
+0.0 1000.0

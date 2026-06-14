@@ -1,0 +1,746 @@
+$ fc src\blendefine\guanka.java "src\blendefine\guanka - 副本.java" 2>&1
+[exit 1]
+正在比较文件 SRC\BLENDEFINE\guanka.java 和 SRC\BLENDEFINE\GUANKA - 副本.JAVA
+***** SRC\BLENDEFINE\guanka.java
+
+import java.io.*;
+import java.lang.reflect.Method;
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+
+import java.lang.reflect.Method;
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+import tool.NumberToChinese;
+
+
+
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+import tool.NumberToChinese;
+import static java.io.PrintStream.*;
+
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+//------------绂佹绉佽嚜閲囨憳------------//
+//寰堝竻鐨刡ug涓€寰嬪啓甯呮柟渚挎悳锟?
+        static final int MAPWIDTH = 81; // 鍦板浘瀹藉害
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+//------------绂佹绉佽嚜閲囨憳------------//
+//寰堝竻鐨刡ug涓€寰嬪啓甯呮柟渚挎悳绱
+        static final int MAPWIDTH = 81; // 鍦板浘瀹藉害
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        static final int MAPHEIGHT = 49; // 鍦板浘楂樺害
+        static final String SAVE_DIR = "saves"; // 瀛樻。鏍圭洰锟?
+        private final ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        static final int MAPHEIGHT = 49; // 鍦板浘楂樺害
+        private final ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        ConcurrentHashMap<String,Integer> machineskey=new ConcurrentHashMap<String,Integer>();
+        ArrayList<String> dirs=new ArrayList<String>();//鐢ㄤ簬define绫讳腑鐨勫疂鐭虫湞锟?
+        HashSet<String> longzhuacanlen=new HashSet<String>(),longzhuacanlen1=new HashSet<String>();//榫欑埅寤剁敵閫夊彇鑼冨洿
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        ConcurrentHashMap<String,Integer> machineskey=new ConcurrentHashMap<String,Integer>();
+        ArrayList<String> dirs=new ArrayList<String>();//鐢ㄤ簬define绫讳腑鐨勫疂鐭虫湞鍚
+        HashSet<String> longzhuacanlen=new HashSet<String>(),longzhuacanlen1=new HashSet<String>();//榫欑埅寤剁敵閫夊彇鑼冨洿
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        HashSet<ImageView> addedmachines=new HashSet<ImageView>();
+        HashSet<ImageView> addedgems=new HashSet<ImageView>();
+        Timeline refbanlistTimeline;
+        TranslateTransition ssoutTransition, ssinTransition, ljoutTransition, ljinTransition;
+        List<ImageView> luoshusList = new ArrayList<>();
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        HashSet<ImageView> addedmachines=new HashSet<ImageView>();
+        List<ImageView> luoshusList = new ArrayList<>();
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+
+        // 鍦ㄧ被涓０鏄庡姩鐢诲锟?
+        private double scalemubanl = screenheight / 688 ;
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+
+        // 鍦ㄧ被涓０鏄庡姩鐢诲璞
+        private double scalemubanl = screenheight / 688 ;
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        public double playrate=4;
+        //鏈哄櫒杩愯閫熷害 鍔犻€熺伀锟?
+        double maxoffsetx = 200 * scalemubanl - screenwidth / 2 * (1 - scale),
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        public double playrate=4;
+        //鏈哄櫒杩愯閫熷害 鍔犻€熺伀鎶
+        double maxoffsetx = 200 * scalemubanl - screenwidth / 2 * (1 - scale),
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+    private Map<Node, Effect> originalEffects = new HashMap<>(),originalEffects1 = new HashMap<>();
+    //閫夋嫨锟?
+        
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+    private Map<Node, Effect> originalEffects = new HashMap<>(),originalEffects1 = new HashMap<>();
+    //閫夋嫨妗
+        
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        grid[][] db = new grid[MAPHEIGHT][MAPWIDTH],//瀛樺偍涓婂眰鏈哄櫒
+                        db0 = new grid[MAPHEIGHT][MAPWIDTH];//瀛樺偍鐧借檸 鐜勬璐熷拰鏈遍泙锟?
+        define[][] df=new define[MAPHEIGHT][MAPWIDTH];//瀹濈煶
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        grid[][] db = new grid[MAPHEIGHT][MAPWIDTH],//瀛樺偍涓婂眰鏈哄櫒
+                        db0 = new grid[MAPHEIGHT][MAPWIDTH];//瀛樺偍鐧借檸 鐜勬璐熷拰鏈遍泙鐐
+        define[][] df=new define[MAPHEIGHT][MAPWIDTH];//瀹濈煶
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        longzhua nowniulz;
+        // 鏂板鍙岀紦鍐茬浉鍏冲彉锟?
+        private WritableImage backBuffer;
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        longzhua nowniulz;
+        // 鏂板鍙岀紦鍐茬浉鍏冲彉閲
+        private WritableImage backBuffer;
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                ncis={"Q","W","E","A","S","D","Z","X","C","R"};
+       int level=-1;//褰撳墠鍏冲崱
+        String[] target=new String[6];//鍚堟垚鐩爣锛岄渶瑕佸疄鏃舵锟?
+        HashSet<String> banlist=new HashSet<String>();//绂佺敤鐨勬満锟?
+        ConcurrentHashMap<String,Integer>baoshis=new ConcurrentHashMap<String,Integer>();//鎵€鏈夊疂鐭筹紝鍖呮嫭瀹濈煶锟?
+        ConcurrentHashMap<String,Integer>hasbaoshis=new ConcurrentHashMap<String,Integer>();//璁板綍褰撳墠鍓╀綑瀹濈煶
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                ncis={"Q","W","E","A","S","D","Z","X","C","R"};
+    int level=-1;//褰撳墠鍏冲崱
+        String[] target=new String[6];//鍚堟垚鐩爣锛岄渶瑕佸疄鏃舵娴
+        HashSet<String> banlist=new HashSet<String>();//绂佺敤鐨勬満鍣
+        ConcurrentHashMap<String,Integer>baoshis=new ConcurrentHashMap<String,Integer>();//鎵€鏈夊疂鐭筹紝鍖呮嫭瀹濈煶缁
+        ConcurrentHashMap<String,Integer>hasbaoshis=new ConcurrentHashMap<String,Integer>();//璁板綍褰撳墠鍓╀綑瀹濈煶
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+     * @param target 闇€瑕佸悎鎴愮殑鐩爣
+     * @param banlist 绂佺敤鐨勬満锟?
+     * @param baoshis 鍙敤鐨勫疂锟?
+     * @param pzs 澶嶅埗鍚堟垚锟?
+     */
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+     * @param target 闇€瑕佸悎鎴愮殑鐩爣
+     * @param banlist 绂佺敤鐨勬満鍣
+     * @param baoshis 鍙敤鐨勫疂鐭
+     * @param pzs 澶嶅埗鍚堟垚琛
+     */
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                dirs.add("0,-1");dirs.add("1,0");dirs.add("1,0");dirs.add("0,1");dirs.add("-1,0");dirs.add("-1,0");//鐢ㄤ簬defi
+ne绫讳腑鐨勫疂鐭虫湞锟?
+                for(int i=0;i<6;i++) {//棰勫埗榫欑埅鐨勫欢鐢宠寖锟?
+                        int m=(int) (10-2*Math.abs(i-2.5));
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                dirs.add("0,-1");dirs.add("1,0");dirs.add("1,0");dirs.add("0,1");dirs.add("-1,0");dirs.add("-1,0");//鐢ㄤ簬defi
+ne绫讳腑鐨勫疂鐭虫湞鍚
+                for(int i=0;i<6;i++) {//棰勫埗榫欑埅鐨勫欢鐢宠寖鍥
+                        int m=(int) (10-2*Math.abs(i-2.5));
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+//                      triid[i]=new Image(getClass().getResourceAsStream("gridpic/gridd"+i+".png"));
+//                      definezang[i]=new Image(getClass().getResourceAsStream("definepic/锟?+i+".png"));
+//              }
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+//                      triid[i]=new Image(getClass().getResourceAsStream("gridpic/gridd"+i+".png"));
+//                      definezang[i]=new Image(getClass().getResourceAsStream("definepic/鑴?+i+".png"));
+//              }
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        
+        //闃叉bounds璁＄畻涓嶆纭鑷村瓙鑺傜偣琚殣锟?
+        lzpane.setPrefSize(12300, 12740);
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        
+        //闃叉bounds璁＄畻涓嶆纭鑷村瓙鑺傜偣琚殣钘
+        lzpane.setPrefSize(12300, 12740);
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                
+//              innershadow鐗瑰埆锟?
+                
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                
+//              innershadow鐗瑰埆鍗
+                
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        root.setPickOnBounds(false);
+        // 鍔ㄧ敾瀹氭椂鍣ㄤ紭鍖栵紝浣跨敤澶氱嚎绋嬫洿鏂颁綅锟?
+//        AnimationTimer timer = new AnimationTimer() {
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        root.setPickOnBounds(false);
+        // 鍔ㄧ敾瀹氭椂鍣ㄤ紭鍖栵紝浣跨敤澶氱嚎绋嬫洿鏂颁綅缃
+//        AnimationTimer timer = new AnimationTimer() {
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        
+//浠ヤ笅涓烘椂搴忕晫锟?
+        ui = new StackPane();
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        
+//浠ヤ笅涓烘椂搴忕晫闈
+        ui = new StackPane();
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        });
+                ssoutTransition = new TranslateTransition(Duration.millis(150), shixu);
+                ssoutTransition.setToY(screenheight/2-270*suofang);
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        });
+                TranslateTransition ssoutTransition = new TranslateTransition(Duration.millis(150), shixu);
+                ssoutTransition.setToY(screenheight/2-270*suofang);
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+
+                ssinTransition = new TranslateTransition(Duration.millis(150), shixu);
+                ssinTransition.setToY(screenheight/2-80*suofang);
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+
+                TranslateTransition ssinTransition = new TranslateTransition(Duration.millis(150), shixu);
+                ssinTransition.setToY(screenheight/2-80*suofang);
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+
+        //閫夋嫨锟?
+        selectionBox = new Rectangle();
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+
+        //閫夋嫨妗
+        selectionBox = new Rectangle();
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                
+                //搴曡壊鍧楋紝浣嗘槸浼氳秴锟?
+                Rectangle r=new Rectangle(300*suofang,200*suofang);
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                
+                //搴曡壊鍧楋紝浣嗘槸浼氳秴鍑
+                Rectangle r=new Rectangle(300*suofang,200*suofang);
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                
+                //绗︾焊
+                double[] transx= {-375,-300,-225,-150,150,225,300,375},
+                                transy= {50,38,28,20,20,28,38,50};
+                for(int i=0;i<8;i++) {
+                        ImageView fz0=new ImageView(fuzhii[i]);
+                        double tx=transx[i],ty=transy[i];
+                        caozuoan[i]=fz0;
+                        caozuoan[i].setTranslateX(tx*suofang);
+                        caozuoan[i].setTranslateY(ty*suofang);
+                        shixu.getChildren().add(caozuoan[i]);
+                        TranslateTransition outTransition = new TranslateTransition(Duration.millis(400), fz0);
+                        outTransition.setToY(0);
+                        outTransition.setInterpolator(Interpolator.EASE_BOTH);
+                        TranslateTransition inTransition = new TranslateTransition(Duration.millis(400), fz0);
+                        inTransition.setToY(ty*suofang);
+                        inTransition.setInterpolator(Interpolator.EASE_BOTH);
+                        
+                        RotateTransition rt=new RotateTransition(Duration.millis(700), fz0);
+                        rt.setToAngle(i<4?360:-360);
+                        rt.setInterpolator(Interpolator.EASE_IN);
+                        rttts[i]=rt;
+                        caozuoan[i].setOnMouseEntered(e->{
+                                inTransition.stop();
+                                outTransition.setFromY(fz0.getTranslateY());
+                                outTransition.play();
+                        });
+                        caozuoan[i].setOnMouseExited(e->{
+                                outTransition.stop();
+                                inTransition.setFromY(fz0.getTranslateY());
+                                inTransition.play();
+                        });
+                        int k=i;
+                        caozuoan[i].setOnMouseClicked(e->{
+                                if (k == 4) {
+                                        if (settingshowf) {
+                                                settingshowf = false;
+                                                Timeline t = new Timeline(new KeyFrame(Duration.seconds(0.15),
+                                                                new KeyValue(settingpane.translateYProperty(), -screenheight)))
+;
+                                                t.play();
+                                                t.setOnFinished(e1 -> {
+                                                        game.getChildren().remove(settingpane);
+                                                });
+                                        } else {
+                                                settingshowf = true;
+                                                if (null == settingpane) {
+                                                        settingpane = new settingpane(this);
+                                                        settingpane.setEffect(ds0);
+                                                }
+                                                settingpane.setTranslateX(screenwidth / 2 - screenheight * 0.8 / 1028 * 798 / 2
+);
+                                                settingpane.setTranslateY(-screenheight);
+                                                game.getChildren().add(settingpane);
+                                                Timeline t = new Timeline(new KeyFrame(Duration.seconds(0.15),
+                                                                new KeyValue(settingpane.translateYProperty(), 0.1 * screenheig
+ht)));
+                                                t.play();
+                                        }
+                                }
+                                rt.play();
+                                rt.setOnFinished(e1->{fz0.setRotate(0);});
+                        });
+                }
+
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                
+//              //绗︾焊
+//              double[] transx= {-375,-300,-225,-150,150,225,300,375},
+//                              transy= {50,38,28,20,20,28,38,50};
+//              for(int i=0;i<8;i++) {
+//                      ImageView fz0=new ImageView(fuzhii[i]);
+//                      double tx=transx[i],ty=transy[i];
+//                      caozuoan[i]=fz0;
+//                      caozuoan[i].setTranslateX(tx*suofang);
+//                      caozuoan[i].setTranslateY(ty*suofang);
+//                      shixu.getChildren().add(caozuoan[i]);
+//                      TranslateTransition outTransition = new TranslateTransition(Duration.millis(400), fz0);
+//                      outTransition.setToY(0);
+//                      outTransition.setInterpolator(Interpolator.EASE_BOTH);
+//                      TranslateTransition inTransition = new TranslateTransition(Duration.millis(400), fz0);
+//                      inTransition.setToY(ty*suofang);
+//                      inTransition.setInterpolator(Interpolator.EASE_BOTH);
+//                      
+//                      RotateTransition rt=new RotateTransition(Duration.millis(700), fz0);
+//                      rt.setToAngle(i<4?360:-360);
+//                      rt.setInterpolator(Interpolator.EASE_IN);
+//                      rttts[i]=rt;
+//                      caozuoan[i].setOnMouseEntered(e->{
+//                              inTransition.stop();
+//                              outTransition.setFromY(fz0.getTranslateY());
+//                              outTransition.play();
+//                      });
+//                      caozuoan[i].setOnMouseExited(e->{
+//                              outTransition.stop();
+//                              inTransition.setFromY(fz0.getTranslateY());
+//                              inTransition.play();
+//                      });
+//                      int k=i;
+//                      caozuoan[i].setOnMouseClicked(e->{
+//                              if (k == 4) {
+//                                      if (settingshowf) {
+//                                              settingshowf = false;
+//                                              Timeline t = new Timeline(new KeyFrame(Duration.seconds(0.15),
+//                                                              new KeyValue(settingpane.translateYProperty(), -screenheight)))
+;
+//                                              t.play();
+//                                              t.setOnFinished(e1 -> {
+//                                                      game.getChildren().remove(settingpane);
+//                                              });
+//                                      } else {
+//                                              settingshowf = true;
+//                                              if (null == settingpane) {
+//                                                      settingpane = new settingpane(this);
+//                                                      settingpane.setEffect(ds0);
+//                                              }
+//                                              settingpane.setTranslateX(screenwidth / 2 - screenheight * 0.8 / 1028 * 798 / 2
+);
+//                                              settingpane.setTranslateY(-screenheight);
+//                                              game.getChildren().add(settingpane);
+//                                              Timeline t = new Timeline(new KeyFrame(Duration.seconds(0.15),
+//                                                              new KeyValue(settingpane.translateYProperty(), 0.1 * screenheig
+ht)));
+//                                              t.play();
+//                                      }
+//                              }
+//                              rt.play();
+//                              rt.setOnFinished(e1->{fz0.setRotate(0);});
+//                      });
+//              }
+
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+
+                //琛屾暟鎻愮ず锟?
+                columnc=new Circle(7);
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+
+                //琛屾暟鎻愮ず鍦
+                columnc=new Circle(7);
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                                        iv12.t=iv2.t;
+//                                      System.out.println(nx+"  "+ny);
+                                        sxgp.add(iv12, x, y);
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                                        iv12.t=iv2.t;
+                                        out.println(nx+"  "+ny);
+                                        sxgp.add(iv12, x, y);
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        
+                ljoutTransition = new TranslateTransition(Duration.millis(150), pzs.stack);
+                ljoutTransition.setToY(0);
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        
+                TranslateTransition ljoutTransition = new TranslateTransition(Duration.millis(150), pzs.stack);
+                ljoutTransition.setToY(0);
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                ljoutTransition.setInterpolator(Interpolator.EASE_BOTH);
+                ljinTransition = new TranslateTransition(Duration.millis(150), pzs.stack);
+                ljinTransition.setToY(-770*suofang);
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                ljoutTransition.setInterpolator(Interpolator.EASE_BOTH);
+                TranslateTransition ljinTransition = new TranslateTransition(Duration.millis(150), pzs.stack);
+                ljinTransition.setToY(-770*suofang);
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                helpmovetime=new Timeline(new KeyFrame(Duration.millis(10),e1->{
+                        //true涓哄彸锟?
+                        if(help.getTranslateX()<0) {
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                helpmovetime=new Timeline(new KeyFrame(Duration.millis(10),e1->{
+                        //true涓哄彸涓
+                        if(help.getTranslateX()<0) {
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                    double clickY = e.getY();
+                    //闅愯棌璁剧疆锟?
+                         if (clickX>screenwidth/2-screenheight*0.8/1028*798/2&&clickY>screenheight*0.1&&clickX<screenwidth/2+sc
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                    double clickY = e.getY();
+                    //闅愯棌璁剧疆鐩
+                         if (clickX>screenwidth/2-screenheight*0.8/1028*798/2&&clickY>screenheight*0.1&&clickX<screenwidth/2+sc
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        
+        // 淇敼鍚庣殑婊氳疆浜嬩欢锛氫互榧犳爣浣嶇疆涓轰腑蹇冪缉锟?
+        root.setOnScroll(event -> {
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        
+        // 淇敼鍚庣殑婊氳疆浜嬩欢锛氫互榧犳爣浣嶇疆涓轰腑蹇冪缉鏀
+        root.setOnScroll(event -> {
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                else if(canscroll&&scaleTimeline.getStatus() == Animation.Status.STOPPED) {
+                    // 鑾峰彇婊氬姩鏂瑰悜鍜屽綋鍓嶆椂锟?
+                    if(!(deltaY<0&&scale<0.17*suofang)&&!(deltaY>0&&scale>0.9*suofang))
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                else if(canscroll&&scaleTimeline.getStatus() == Animation.Status.STOPPED) {
+                    // 鑾峰彇婊氬姩鏂瑰悜鍜屽綋鍓嶆椂闂
+                    if(!(deltaY<0&&scale<0.17*suofang)&&!(deltaY>0&&scale>0.9*suofang))
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                if(e.getCode().toString().equals("CONTROL")) {          //娉ㄦ剰锛宺obot鐨勪簨浠惰兘琚洃鍚埌锛屼細鑷姩瑙
+鍙戜竴锟?
+                        if(!shixuoutf) {
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                if(e.getCode().toString().equals("CONTROL")) {          //娉ㄦ剰锛宺obot鐨勪簨浠惰兘琚洃鍚埌锛屼細鑷姩瑙
+鍙戜竴娆
+                        if(!shixuoutf) {
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                }
+                if(e.getCode().toString().equals("F5")) {
+                        System.out.println("姝ｅ湪淇濆瓨瀛樻。");
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                }
+                if(e.getCode().toString().equals("F10")) {
+                        System.out.println("姝ｅ湪淇濆瓨瀛樻。");
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                                        
+                                        //鎺掑簭鎵€鏈夋満锟?
+                                        selectitem.removeIf(item -> item instanceof definespawn); 
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                                        
+                                        //鎺掑簭鎵€鏈夋満鍣
+                                        selectitem.removeIf(item -> item instanceof definespawn); 
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                                List<grid> sorted = new ArrayList<>(selectitem);
+                                sorted.sort(Comparator.comparingInt(g -> orderMap.containsKey(g) ? orderMap.get(g) : Integer.MA
+X_VALUE));
+                                selectitem.clear();
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                                List<grid> sorted = new ArrayList<>(selectitem);
+                                sorted.sort(Comparator.comparingInt(orderMap::get));
+                                selectitem.clear();
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+//            } else {
+//                // 鐐瑰嚮鍒板浘褰細鍙牴鎹渶瑕佹竻绌洪珮浜垨鍗曠嫭閫変腑锛屾湰渚嬫竻绌洪珮锟?
+//                clearAllHighlights();
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+//            } else {
+//                // 鐐瑰嚮鍒板浘褰細鍙牴鎹渶瑕佹竻绌洪珮浜垨鍗曠嫭閫変腑锛屾湰渚嬫竻绌洪珮浜
+//                clearAllHighlights();
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                
+//鍙互浣跨敤shift+宸﹂敭鎴栬€呬腑閿垹锟?
+                gpane.setOnMouseClicked(e -> {
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                
+//鍙互浣跨敤shift+宸﹂敭鎴栬€呬腑閿垹闄
+                gpane.setOnMouseClicked(e -> {
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                                }
+                                //鏃跺簭鐨勯潬杩戝脊鍑烘敹锟?
+                                if(nowmousey>screenheight-10*suofang) {
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                                }
+                                //鏃跺簭鐨勯潬杩戝脊鍑烘敹璧
+                                if(nowmousey>screenheight-10*suofang) {
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                                                });
+                                                handlepane.getChildren().clear();//娓呴櫎璁剧疆瑙掑害鎿嶄綔锟?
+                                        }
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                                                });
+                                                handlepane.getChildren().clear();//娓呴櫎璁剧疆瑙掑害鎿嶄綔鏉
+                                        }
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                                }
+                                //鐏靛叿鐩掔殑闈犺繎寮瑰嚭鏀惰捣
+                                if(nowmousey<30*suofang) {
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                                }
+                                //鏃跺簭鐨勯潬杩戝脊鍑烘敹璧
+                                if(nowmousey<30*suofang) {
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                
+                savedbhistory(0);//鍒濆鍖栫0锟?
+                
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                
+                savedbhistory(0);//鍒濆鍖栫0甯
+                
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                
+//              List<List<String>>p1=findAllConnectionPaths("锟?,"锟?,3);
+//              System.out.println(p1.toString());
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                
+//              List<List<String>>p1=findAllConnectionPaths("閲?,"椹?,3);
+//              System.out.println(p1.toString());
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        
+        //TODO 璺冲嚭閫夋嫨涓嬩竴鍏虫垨閫€鍑虹殑鎻愮ず锛屼笅涓€鍏虫椂閫夋嫨鏄惁淇濈暀鏈哄櫒锛屽厛璺冲嚭鐏电鐩掑紑濮嬭В锟?
+鏄剧ず鎺掕锟?
+        public void finishlevel() {
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        
+        //TODO 璺冲嚭閫夋嫨涓嬩竴鍏虫垨閫€鍑虹殑鎻愮ず锛屼笅涓€鍏虫椂閫夋嫨鏄惁淇濈暀鏈哄櫒锛屽厛璺冲嚭鐏电鐩掑紑濮嬭В璋?
+鏄剧ず鎺掕姒
+        public void finishlevel() {
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                                else {
+                                        // 鍒ゆ柇鏃舵柟鍚戦渶瑕佷笌 target 涓€鑷达紙涓€鍏卞叚鏂瑰悜锟?
+                                        Boolean hastarget = false;
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                                else {
+                                        // 鍒ゆ柇鏃舵柟鍚戦渶瑕佷笌 target 涓€鑷达紙涓€鍏卞叚鏂瑰悜锛
+                                        Boolean hastarget = false;
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                                                            hastarget = true;
+                                                            break z; // 鎵惧埌鍖归厤锛岃烦鍑哄弻閲嶅惊锟?
+                                                        }
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                                                            hastarget = true;
+                                                            break z; // 鎵惧埌鍖归厤锛岃烦鍑哄弻閲嶅惊鐜
+                                                        }
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        }
+        // 閫氱敤瑙ｆ瀽锛氬皢 "1,0锟?,1锟?,0锟?,1锟?,0锟?,1锟? 瑙ｆ瀽锟?HashMap<鍧愭爣, 鍏冪礌>
+        // 鍏冪礌鏀寔浠绘剰闈炴暟瀛椼€侀潪閫楀彿鐨勮繛缁瓧绗︼紙濡傛眽瀛椼€佽嫳鏂囩瓑锟?
+        private HashMap<String, String> parseToMap(String str) {
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        }
+        // 閫氱敤瑙ｆ瀽锛氬皢 "1,0闃?,1闃?,0鐏?,1姘?,0闆?,1椋? 瑙ｆ瀽涓?HashMap<鍧愭爣, 鍏冪礌>
+        // 鍏冪礌鏀寔浠绘剰闈炴暟瀛椼€侀潪閫楀彿鐨勮繛缁瓧绗︼紙濡傛眽瀛椼€佽嫳鏂囩瓑锛
+        private HashMap<String, String> parseToMap(String str) {
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+            HashMap<String, String> map = new HashMap<>();
+            // 姝ｅ垯锛氬尮锟?(鏁板瓧,鏁板瓧) 鍚庤窡 闈炴暟瀛椾笖闈為€楀彿鐨勪换鎰忓瓧绗︼紙鑷冲皯涓€涓級
+            Pattern pattern = Pattern.compile("(\\d+,\\d+)([^\\d,]+)");
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+            HashMap<String, String> map = new HashMap<>();
+            // 姝ｅ垯锛氬尮閰?(鏁板瓧,鏁板瓧) 鍚庤窡 闈炴暟瀛椾笖闈為€楀彿鐨勪换鎰忓瓧绗︼紙鑷冲皯涓€涓級
+            Pattern pattern = Pattern.compile("(\\d+,\\d+)([^\\d,]+)");
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+            while (matcher.find()) {
+                String coord = matcher.group(1);      // 锟?"1,0"
+                String element = matcher.group(2);    // 锟?"锟?, "锟?, "Water" 锟?
+                map.put(coord, element);
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+            while (matcher.find()) {
+                String coord = matcher.group(1);      // 濡?"1,0"
+                String element = matcher.group(2);    // 濡?"闃?, "鐏?, "Water" 绛
+                map.put(coord, element);
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                if(!baoshis.isEmpty()) {
+                        //TODO 閿€姣佸叧鍜岃浆鍖栧叧鐩存帴鏀惧湪鐩橀潰锟?
+                        if(baoshis.size()==1&&baoshis.keySet().iterator().next().length()>5) {
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                if(!baoshis.isEmpty()) {
+                        //TODO 閿€姣佸叧鍜岃浆鍖栧叧鐩存帴鏀惧湪鐩橀潰涓
+                        if(baoshis.size()==1&&baoshis.keySet().iterator().next().length()>5) {
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        public void refbanlist() {
+                if(refbanlistTimeline!=null) {
+                        refbanlistTimeline.stop();
+                        refbanlistTimeline=null;
+                }
+                Timeline t=new Timeline(new KeyFrame(Duration.millis(15),e->{try {if(level>-1&&!banlist.contains("闈掗緳"))inia
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        public void refbanlist() {
+                
+                Timeline t=new Timeline(new KeyFrame(Duration.millis(15),e->{try {if(level>-1&&!banlist.contains("闈掗緳"))inia
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+2) {}}),
+//                              new KeyFrame(Duration.millis(20),e->{try {if(level==0&&!banlist.contains("涔濋緳锟?))iniany("
+節榫欙拷?, 900, 650,-200,300,1,
+//                                              guanka.class.getMethod("makejiulongguan",int.class,int.class));} catch (Excepti
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+2) {}}),
+//                              new KeyFrame(Duration.millis(20),e->{try {if(level==0&&!banlist.contains("涔濋緳鐏?))iniany("
+節榫欑亴", 900, 650,-200,300,1,
+//                                              guanka.class.getMethod("makejiulongguan",int.class,int.class));} catch (Excepti
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+//                              new KeyFrame(Duration.millis(20),e->{try {if(level>-1&&!banlist.contains("鍏悎"))iniany("鍏
+悎鍛ㄥぉ娣峰厓锟?, 600, 520,100,300,1, 
+//                                              guanka.class.getMethod("makeliuhehunyuan",int.class,int.class));} catch (Except
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+//                              new KeyFrame(Duration.millis(20),e->{try {if(level>-1&&!banlist.contains("鍏悎"))iniany("鍏
+悎鍛ㄥぉ娣峰厓闃?, 600, 520,100,300,1, 
+//                                              guanka.class.getMethod("makeliuhehunyuan",int.class,int.class));} catch (Except
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                t.play();
+                refbanlistTimeline = t;
+                if(level>-1&&!banlist.contains("鐜勬"))inixuanwu();
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                t.play();
+                if(level>-1&&!banlist.contains("鐜勬"))inixuanwu();
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        public void cleardata() {
+                // 鍏堟竻闄ゆ墍鏈夋満鍣ㄧ殑瑙嗚鍏冪礌锛堢敤 try-catch 鍖呰９锛屽洜锟?xuanwu.remove 锟?
+                // gk.machines.remove(machineindex) 鍦ㄧ储寮曞彉鍖栧悗鍙兘瓒婄晫锟?
+                List<grid> machinesCopy = new ArrayList<>(machines);
+                for (grid g : machinesCopy) {
+                        try { g.remove(); } catch (Exception ignored) {}
+                }
+                machines.clear();
+                dfpane.getChildren().clear();
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+        public void cleardata() {
+                machines.forEach(e->{
+                        e.remove();
+                });
+                dfpane.getChildren().clear();
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+//      else if(nowplayshixupos==dbhistory.size())      
+        if(nowplayshixupos==0&&dbhistory.size()==0)//淇濆瓨鍒濆锟?
+                        savedbhistory(0);
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+//      else if(nowplayshixupos==dbhistory.size())      
+        if(nowplayshixupos==0&&dbhistory.size()==0)//淇濆瓨鍒濆甯
+                        savedbhistory(0);
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                readhistory(nowplayshixupos);
+                //璇诲彇寮€濮嬪抚鐨勬暟锟?
+        }
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                readhistory(nowplayshixupos);
+                //璇诲彇寮€濮嬪抚鐨勬暟鎹
+        }
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+                int k=i;
+                //闇€瑕佸欢鍚庝竴娈垫椂闂撮槻姝㈡棤娉曞弽锟?
+        
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+                int k=i;
+                //闇€瑕佸欢鍚庝竴娈垫椂闂撮槻姝㈡棤娉曞弽搴
+        
+*****
+
+***** SRC\BLENDEFINE\guanka.java
+        }
+        //娓呯┖閲嶅彔鎻愮ず鍜岄緳鐖锟?
+        handlepane.getChildren().forEach(e2->{
+***** SRC\BLENDEFINE\GUANKA - 副本.JAVA
+     
+
+[… truncated 63639 chars …]

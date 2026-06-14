@@ -1,0 +1,7 @@
+Perfect 807
+Early 7
+Late 4
+Miss 2
+MaxCombo 553
+天元 105.09%
+0.0 1000.0
