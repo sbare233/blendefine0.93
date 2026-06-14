@@ -1,3 +1,4 @@
+<img width="1920" height="1080" alt="005d1b68-6ee7-4d4b-b950-911ba40a7252" src="https://github.com/user-attachments/assets/d5319127-7dcf-4a8a-bf6a-93c7ed1f5a5e" />
 # 混元灵印 / Blendefine
 
 > **在道法机关之间，将阴阳五行炼化为天地万象。**
@@ -67,7 +68,9 @@
 
 ## 截图
 
-（待补充）
+<img width="1232" height="706" alt="steam宣传图" src="https://github.com/user-attachments/assets/c7f9e162-22d9-48b1-b4cb-bc4b43dcb140" />
+<img width="1920" height="1080" alt="005d1b68-6ee7-4d4b-b950-911ba40a7252" src="https://github.com/user-attachments/assets/589c9a87-7ae4-4053-8681-991c33f0659f" />
+
 
 ---
 
