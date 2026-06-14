@@ -1,0 +1,11 @@
+bin/
+*.class
+*.log
+*.args
+.DS_Store
+saves/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
