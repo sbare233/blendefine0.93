@@ -106,3 +106,85 @@ java -cp bin blendefine.blendefine
 ---
 
 *"阴阳者，天地之道也，万物之纲纪，变化之父母。"*
+
+## License
+
+This project is licensed under **two distinct licenses**, depending on the content:
+
+*   **Source Code & Scripts:** Licensed under the **GNU General Public License v3.0 (GPLv3)**.
+    *   You are free to use, modify, and distribute the code under the terms of the GPLv3.
+    *   **Important:** Any derivative work that includes or is based on this code **must also be licensed under the GPLv3** and make its source code available.
+    *   See the [`GPLv3_License.txt`] file for the full GPLv3 text.
+
+*   **Art Assets (Graphics, Textures, Models, Audio, Music, etc.):** Licensed under the **Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)**.
+    *   You are free to share (copy and redistribute) and adapt (remix, transform, build upon) these assets.
+    *   **You must:**
+        *   **Attribution:** Give appropriate credit to the original author(s), provide a link to the license, and indicate if changes were made.
+        *   **ShareAlike:** If you remix, transform, or build upon the material, you must distribute your contributions under the **same license (CC BY-SA 4.0)**.
+    *   See the [`LICENSE-CC-BY-SA-4.0.txt`] file for the full CC BY-SA 4.0 text.
+
+    **Please note:** Code and assets is packaged to [bd.jar],not include [jre1.8.0_202].
+    These licenses apply *separately* to code and assets. Modifying code does not change the license of the assets, and vice-versa. Combining them into a single work (the game) is permitted, but the licensing requirements for each component remain.
+    Original author name is"寰宇四象计划" or "彩蓝色游戏工作室"
+
+
+## HEALTH & SAFETY WARNING
+
+**PHOTOSENSITIVE SEIZURE WARNING**  
+This game contains rapidly flashing lights and dynamic visual effects that may trigger **epileptic seizures** or **discomfort** in photosensitive individuals.  
+
+**PRECAUTIONS:**  
+-  Play in a well-lit environment  
+-  Maintain a safe distance from the screen (≥ 2.5x screen diagonal length)  
+-  Consult a doctor before playing if you have a history of epilepsy  
+
+**STOP IMMEDIATELY AND SEEK MEDICAL HELP IF YOU EXPERIENCE:**  
+• Dizziness • Nausea • Eye twitching • Muscle spasms • Loss of awareness  
+
+
+## CONTENT DISCLAIMER  
+
+This is a work of **FICTION**. All characters, events, locations, and religions depicted are **entirely imaginary**. No association with real-world entities or beliefs is intended or should be inferred.  
+
+Game mechanics involving violence, moral choices, or controversial themes exist solely for narrative purposes and **do not endorse real-world actions**.
+
+
+
+##  开源许可
+
+本项目采用**双重许可协议**，请严格遵守以下条款：
+
+### 代码部分 (GPLv3)
+- 所有源代码文件遵循 **GNU GPLv3** 协议
+- 您有权使用、修改和分发代码，但**衍生作品必须开源并采用相同许可**
+- 完整协议见 [GPLv3_License.txt] 文件
+
+### 资源部分 (CC BY-SA 4.0)
+- 所有艺术资源（包括图像、音频、模型等）遵循 **CC BY-SA 4.0** 协议
+- 您可自由共享和改编作品，但必须：
+  - **署名**：注明原作者并保留协议链接
+  - **相同方式共享**：衍生作品需采用相同许可
+- 资源许可详情见 [CC-BY-SA-4.0_License.txt]
+
+ 代码与资源已被打包至[bd.jar],本许可不包括[jre1.8.0_202]
+ 代码与资源许可相互独立，修改某部分不影响另一部分的许可状态。
+ 授权署名使用“寰宇四象计划” 或者 “彩蓝色游戏工作室”
+
+
+## 健康与安全警告
+
+本游戏包含**快速闪烁的灯光、动态光效或重复图案**。这些视觉效果可能诱发**光敏性癫痫（Photosensitive Epilepsy）发作**，甚至对无癫痫病史的人造成不适。
+
+**请务必注意：**
+- 游玩前确保环境光线充足，避免在黑暗中使用。
+- 与屏幕保持足够距离（建议 ≥ 2.5 倍屏幕对角线长度）。
+- 如您或家族有癫痫病史，游玩前请咨询医生。
+- **若出现以下症状请立即停止游戏并就医**：  
+  🔹 头晕/恶心 🔹 视力异常 🔹 眼部/面部抽搐 🔹 肢体抽搐 🔹 意识模糊 🔹 失去知觉
+
+
+## 内容免责声明
+
+本游戏故事、角色、世界观及所有情节均为**虚构创作**，与现实中的个人、事件、组织、宗教、历史或国家**无任何关联**。游戏内容仅代表虚构设定，**不传递任何现实立场或价值观**。
+
+游戏内呈现的暴力、道德选择等元素均为剧情设计需要，**不鼓励现实模仿**。
