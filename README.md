@@ -107,48 +107,6 @@ java -cp bin blendefine.blendefine
 
 *"阴阳者，天地之道也，万物之纲纪，变化之父母。"*
 
-## License
-
-This project is licensed under **two distinct licenses**, depending on the content:
-
-*   **Source Code & Scripts:** Licensed under the **GNU General Public License v3.0 (GPLv3)**.
-    *   You are free to use, modify, and distribute the code under the terms of the GPLv3.
-    *   **Important:** Any derivative work that includes or is based on this code **must also be licensed under the GPLv3** and make its source code available.
-    *   See the [`GPLv3_License.txt`] file for the full GPLv3 text.
-
-*   **Art Assets (Graphics, Textures, Models, Audio, Music, etc.):** Licensed under the **Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)**.
-    *   You are free to share (copy and redistribute) and adapt (remix, transform, build upon) these assets.
-    *   **You must:**
-        *   **Attribution:** Give appropriate credit to the original author(s), provide a link to the license, and indicate if changes were made.
-        *   **ShareAlike:** If you remix, transform, or build upon the material, you must distribute your contributions under the **same license (CC BY-SA 4.0)**.
-    *   See the [`LICENSE-CC-BY-SA-4.0.txt`] file for the full CC BY-SA 4.0 text.
-
-    **Please note:** Code and assets is packaged to [bd.jar],not include [jre1.8.0_202].
-    These licenses apply *separately* to code and assets. Modifying code does not change the license of the assets, and vice-versa. Combining them into a single work (the game) is permitted, but the licensing requirements for each component remain.
-    Original author name is"寰宇四象计划" or "彩蓝色游戏工作室"
-
-
-## HEALTH & SAFETY WARNING
-
-**PHOTOSENSITIVE SEIZURE WARNING**  
-This game contains rapidly flashing lights and dynamic visual effects that may trigger **epileptic seizures** or **discomfort** in photosensitive individuals.  
-
-**PRECAUTIONS:**  
--  Play in a well-lit environment  
--  Maintain a safe distance from the screen (≥ 2.5x screen diagonal length)  
--  Consult a doctor before playing if you have a history of epilepsy  
-
-**STOP IMMEDIATELY AND SEEK MEDICAL HELP IF YOU EXPERIENCE:**  
-• Dizziness • Nausea • Eye twitching • Muscle spasms • Loss of awareness  
-
-
-## CONTENT DISCLAIMER  
-
-This is a work of **FICTION**. All characters, events, locations, and religions depicted are **entirely imaginary**. No association with real-world entities or beliefs is intended or should be inferred.  
-
-Game mechanics involving violence, moral choices, or controversial themes exist solely for narrative purposes and **do not endorse real-world actions**.
-
-
 
 ##  开源许可
 
