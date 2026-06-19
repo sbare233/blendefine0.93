@@ -6,6 +6,12 @@
 
 ---
 
+Steam https://store.steampowered.com/app/3743730
+Discord https://discord.gg/29AxaQy2sy
+X https://x.com/HuanyuSixiang
+QQ群 655452426
+比利比利 https://space.bilibili.com/19403590
+
 ## 概览
 
 《混元灵印》是一款受 Opus Magnum 启发的"机关编程"解谜游戏。你扮演一位天师，在灵盘上搭建由**青龙爪**、**朱雀炉**、**五脏凝练炉**、**混元器**组成的道法流水线，通过编排**时序指令**，将基础的**阴阳五行**灵印一步步合成为四象、八卦、天干地支、八仙、九龙子等更高等的灵印。
