@@ -7,9 +7,13 @@
 ---
 
 Steam https://store.steampowered.com/app/3743730
+
 Discord https://discord.gg/29AxaQy2sy
+
 X https://x.com/HuanyuSixiang
+
 QQ群 655452426
+
 比利比利 https://space.bilibili.com/19403590
 
 ## 概览
